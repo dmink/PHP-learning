@@ -10,7 +10,8 @@
     <body>
 
         <?php
-            echo 'the first commit into github';
+            echo 'the first commit into github<br>';
+            echo 'Hello, World';
         ?>
 
     </body>
