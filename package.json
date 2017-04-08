@@ -2,7 +2,7 @@
 {
   "name": "php-lessons",
   "version": "1.0.0",
-  "description": "PHP lessons. Igor Borisov",
+  "description": "PHP lessons",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
