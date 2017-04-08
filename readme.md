@@ -1,1 +1,1 @@
-# PHP homework for LoftSchool's lessons
+# PHP lessons
