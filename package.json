@@ -1,0 +1,25 @@
+{
+  "name": "php-lessons",
+  "version": "1.0.0",
+  "description": "PHP lessons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmink/PHP-lessons.git"
+  },
+  "keywords": [
+    "php",
+    "lessons",
+    "learning",
+    "homework"
+  ],
+  "author": "Dmitry Kostrubiak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmink/PHP-lessons/issues"
+  },
+  "homepage": "https://github.com/dmink/PHP-lessons#readme"
+}
