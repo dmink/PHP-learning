@@ -6,14 +6,14 @@ $value_size = (int)$value_size;
 
 switch( strtoupper($value_last_symbol) ) {
 
-    case 'M':
-        $value_size *= 1024; break;
     case 'G':
-        $value_size *= 1024; break;
+        $value_size *= 1024;
+    case 'M':
+        $value_size *= 1024;
     case 'K':
-        $value_size *= 1024; break;
-    default:
-        $value_size *= 1;
+        $value_size *= 1024;
 }
+ 
+echo $value_size;
 
-echo $value_size . '<br>';
+phpinfo();
