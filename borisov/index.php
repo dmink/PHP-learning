@@ -43,7 +43,7 @@
                 }
             ?>
 
-            <h1><?= $welcome ?>, Гость!</h1>
+            <h1><?= $welcome ?>, dmink!</h1>
             <!-- Заголовок -->
 
             <blockquote class="date-current">
@@ -71,12 +71,47 @@
             <!-- Навигация -->
             <h2>Навигация по сайту</h2>
             <!-- Меню -->
+            <?php
+                $main_menu = [
+                    [
+                        'href' => 'index.php',
+                        'name' => 'Home'
+                    ],
+                    [
+                        'href' => 'about.php',
+                        'name' => 'About'
+                    ],
+                    [
+                        'href' => 'contact.php',
+                        'name' => 'Contact'
+                    ],
+                    [
+                        'href' => 'table.php',
+                        'name' => 'Table'
+                    ],
+                    [
+                        'href' => 'calc.php',
+                        'name' => 'Calculation'
+                    ]
+                ];
+            ?>
+
             <ul>
-                <li><a href='index.php'>Домой</a></li>
-                <li><a href='about.php'>О нас</a></li>
-                <li><a href='contact.php'>Контакты</a></li>
-                <li><a href='table.php'>Таблица умножения</a></li>
-                <li><a href='calc.php'>Калькулятор</a></li>
+                <li>
+                    <a href='<?= $main_menu[0]['href']; ?>'><?= $main_menu[0]['name']; ?></a>
+                </li>
+                <li>
+                    <a href='<?= $main_menu[1]['href']; ?>'><?= $main_menu[1]['name']; ?></a>
+                </li>
+                <li>
+                    <a href='<?= $main_menu[2]['href']; ?>'><?= $main_menu[2]['name']; ?></a>
+                </li>
+                <li>
+                    <a href='<?= $main_menu[3]['href']; ?>'><?= $main_menu[3]['name']; ?></a>
+                </li>
+                <li>
+                    <a href='<?= $main_menu[4]['href']; ?>'><?= $main_menu[4]['name']; ?></a>
+                </li>
             </ul>
             <!-- Меню -->
             <!-- Навигация -->
