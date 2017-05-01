@@ -6,8 +6,42 @@
     $month = strftime('%B');
     $month = iconv( 'windows-1251', 'utf-8', $month );
     $year = strftime('%Y');
-
     $welcome = '';
+
+    if ( 23 <= $hour && $hour < 5 ) {
+        $welcome = 'Доброй ночи';
+    } elseif ( 5 <= $hour && $hour < 12 ) {
+        $welcome = 'Доброе утро';
+    } elseif ( 12 <= $hour && $hour < 18 ) {
+        $welcome = 'Добрый день';
+    } elseif ( 18 <= $hour && $hour < 23 ) {
+        $welcome = 'Добрый вечер';
+    } else {
+        $welcome = 'Привет';
+    }
+
+    $main_menu = [
+        [
+            'href' => 'index.php',
+            'name' => 'Home'
+        ],
+        [
+            'href' => 'about.php',
+            'name' => 'About'
+        ],
+        [
+            'href' => 'contact.php',
+            'name' => 'Contact'
+        ],
+        [
+            'href' => 'table.php',
+            'name' => 'Table'
+        ],
+        [
+            'href' => 'calc.php',
+            'name' => 'Calculation'
+        ]
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -28,20 +62,6 @@
 
         <div id="content">
         <!-- Заголовок -->
-
-            <?php
-                if ( 23 <= $hour && $hour < 5 ) {
-                    $welcome = 'Доброй ночи';
-                } elseif ( 5 <= $hour && $hour < 12 ) {
-                    $welcome = 'Доброе утро';
-                } elseif ( 12 <= $hour && $hour < 18 ) {
-                    $welcome = 'Добрый день';
-                } elseif ( 18 <= $hour && $hour < 23 ) {
-                    $welcome = 'Добрый вечер';
-                } else {
-                    $welcome = 'Привет';
-                }
-            ?>
 
             <h1><?= $welcome ?>, dmink!</h1>
             <!-- Заголовок -->
@@ -72,47 +92,14 @@
             <h2>Навигация по сайту</h2>
             <!-- Меню -->
             <?php
-                $main_menu = [
-                    [
-                        'href' => 'index.php',
-                        'name' => 'Home'
-                    ],
-                    [
-                        'href' => 'about.php',
-                        'name' => 'About'
-                    ],
-                    [
-                        'href' => 'contact.php',
-                        'name' => 'Contact'
-                    ],
-                    [
-                        'href' => 'table.php',
-                        'name' => 'Table'
-                    ],
-                    [
-                        'href' => 'calc.php',
-                        'name' => 'Calculation'
-                    ]
-                ];
+                echo '<ul class="main-menu">';
+                    foreach( $main_menu as $main_menu_item ) {
+                        echo '<li class="main-menu__item">';
+                        echo "<a class='main-menu__link' href='{$main_menu_item['href']}'>{$main_menu_item['name']}</a>";
+                        echo '</li>';
+                    };
+                echo '</ul>';
             ?>
-
-            <ul>
-                <li>
-                    <a href='<?= $main_menu[0]['href']; ?>'><?= $main_menu[0]['name']; ?></a>
-                </li>
-                <li>
-                    <a href='<?= $main_menu[1]['href']; ?>'><?= $main_menu[1]['name']; ?></a>
-                </li>
-                <li>
-                    <a href='<?= $main_menu[2]['href']; ?>'><?= $main_menu[2]['name']; ?></a>
-                </li>
-                <li>
-                    <a href='<?= $main_menu[3]['href']; ?>'><?= $main_menu[3]['name']; ?></a>
-                </li>
-                <li>
-                    <a href='<?= $main_menu[4]['href']; ?>'><?= $main_menu[4]['name']; ?></a>
-                </li>
-            </ul>
             <!-- Меню -->
             <!-- Навигация -->
         </div>
