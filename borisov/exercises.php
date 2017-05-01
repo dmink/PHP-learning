@@ -1,14 +1,23 @@
 <?php
 
-for ( $num = 1; $num <= 20; $num +=2 ) {
-    echo $num . '<br>';
-};
+$people = [
+    'Dmytro' => 'Ukrainian',
+    'John' => 'English',
+    'Toshiba' => 'Japan'
+];
 
-$string = 'Hello';
-$string_length = strlen($string);
-$i = 0;
-
-while ( $i < $string_length ) {
-    echo strtoupper( $string{$i} ) . '<br>';
-    $i++;
+foreach ( $people as $key => $val ) {
+    echo "$key : $val" . '<br>';
 }
+
+$nums = [1, 2, 3, 4, 5];
+
+echo var_dump($nums) . '<br>';
+
+foreach ( $nums as &$v ) {
+    $v *= 10;
+}
+
+echo var_dump($nums) . '<br>';
+unset( $v );
+echo $v;
