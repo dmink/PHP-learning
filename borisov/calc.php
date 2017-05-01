@@ -37,6 +37,7 @@
       <br />
       <input type='submit' value='Считать'>
     </form>
+
     <!-- Область основного контента -->
   </div>
   <div id="nav">
